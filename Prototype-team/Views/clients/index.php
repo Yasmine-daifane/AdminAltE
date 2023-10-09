@@ -52,13 +52,13 @@ include_once(__ROOT__ . "/Layout/head.php");
             <th style="width: 5%">
                 #
             </th>
-            <th style="width: 20%">
+            <th style="width: 5%">
                 Nom
             </th>
-            <th class="text-center" style="width: 20%">
+            <th class="text-center" style="width: 10%">
                 Code
             </th>
-            <th style="width: 25%">
+            <th style="width: 35%">
                 Description
             </th>
             <th style="width: 15%"> <!-- Adjust the width for action buttons -->
@@ -70,7 +70,7 @@ include_once(__ROOT__ . "/Layout/head.php");
         <tr>
             <td>1</td>
             <td>C1</td>
-            <td>Code1</td>
+            <td>Maquette</td>
             <td>
                 Maquetter une application mobile
             </td>
@@ -88,7 +88,7 @@ include_once(__ROOT__ . "/Layout/head.php");
         <tr>
             <td>2</td>
             <td>C2</td>
-            <td>Code2</td>
+            <td>Base Données</td>
             <td>
                 Manipuler une base de données - perfectionnement
             </td>
@@ -106,7 +106,7 @@ include_once(__ROOT__ . "/Layout/head.php");
         <tr>
             <td>3</td>
             <td>C3</td>
-            <td>Code3</td>
+            <td>back-end</td>
             <td>
                 Développer la partie back-end d'une application web ou web mobile - perfectionnement
             </td>
@@ -124,9 +124,9 @@ include_once(__ROOT__ . "/Layout/head.php");
         <tr>
             <td>4</td>
             <td>C4</td>
-            <td>Code4</td>
+            <td>Gestion</td>
             <td>
-                Collaborer à la gestion d’un projet informatique et à l’organisation de l’environnement de développement - perfectionnement
+                Collaborer à la gestion d'un projet informatique et à l'organisation de l'environnement de développement - perfectionnement
             </td>
             <td class="client-actions">
                 <a class="btn btn-info btn-sm" href="editer.php?">
@@ -142,7 +142,7 @@ include_once(__ROOT__ . "/Layout/head.php");
         <tr>
             <td>5</td>
             <td>C5</td>
-            <td>Code5</td>
+            <td>Mobile native</td>
             <td>
                 Développer une application mobile native, avec Android et React Native
             </td>
@@ -160,10 +160,9 @@ include_once(__ROOT__ . "/Layout/head.php");
         <tr>
             <td>6</td>
             <td>C6</td>
-            <td>Code6</td>
+            <td>Tests</td>
             <td>
-                Préparer et exécuter les plans de tests d’une application
-            </td>
+            Préparer et exécuter les plans de tests d'une application            </td>
             <td class="client-actions">
                 <a class="btn btn-info btn-sm" href="editer.php?">
                     <i class="fas fa-pencil-alt"></i>
@@ -178,10 +177,9 @@ include_once(__ROOT__ . "/Layout/head.php");
         <tr>
             <td>7</td>
             <td>C7</td>
-            <td>Code7</td>
+            <td>Déploiement</td>
             <td>
-                Préparer et exécuter le déploiement d’une application web et mobile - perfectionnement
-            </td>
+            Préparer et exécuter le déploiement d'une application web et mobile - perfectionnement            </td>
             <td class="client-actions">
                 <a class="btn btn-info btn-sm" href="editer.php?">
                     <i class="fas fa-pencil-alt"></i>
