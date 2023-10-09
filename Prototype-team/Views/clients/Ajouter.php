@@ -9,10 +9,7 @@ include_once(__ROOT__ . "/Layout/head.php");
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-        <!-- Preloader -->
-        <?php
-        include_once(__ROOT__ . "/Layout/preloader.php");
-        ?>
+       
         <!-- Navbar -->
         <?php
         include_once(__ROOT__ . "/Layout/navbare.php");
