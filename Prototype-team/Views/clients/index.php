@@ -1,34 +1,28 @@
 <?php
-// include "../Layout/root.php";
-
-// 
-// Afficher la liste des projets 
-//
-
-// if request isn't ajax:
-
+define('__ROOT__', dirname(dirname(__FILE__)));
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include_once(__ROOT__ . "/Views/Layout/head.php");
+include_once(__ROOT__ . "/Layout/head.php");
+
 ?>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <!-- Preloader -->
         <?php
-        include_once(__ROOT__ . "/Views/Layout/preloader.php");
+        include_once(__ROOT__ . "/Layout/preloader.php");
         ?>
         <!-- Navbar -->
         <?php
-        include_once(__ROOT__ . "/Views/Layout/navbare.php");
+        include_once(__ROOT__ . "/Layout/navbare.php");
         ?>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
         <?php
-        include_once(__ROOT__ . "/Views/Layout/sidebare.php");
+        include_once(__ROOT__ . "/Layout/sidebare.php");
         ?>
         <!-- /.sidebar -->
 
@@ -43,8 +37,8 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Projects</li>
+                                <li class="breadcrumb-item"><a href="#">Accueill</a></li>
+                                <li class="breadcrumb-item active">Compétences</li>
                             </ol>
                         </div>
                     </div>
@@ -55,7 +49,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Projects</h3>
+                        <h3 class="card-title">Compétences</h3>
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                 <i class="fas fa-minus"></i>
@@ -65,7 +59,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
                     <div class="card-body p-2">
                         <div class="row p-3">
                             <div class="col-sm-12 col-md-6">
-                                <a class="btn btn-primary" href="Ajouter.php">Add Project</a>
+                                <a class="btn btn-primary" href="Ajouter.php">Add Compétences</a>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div id="search_project" class="dataTables_filter"><input type="search" id="search"
@@ -74,7 +68,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
                             </div>
                         </div>
                         <div id="result" class="p-3">
-                            <?php include_once(__ROOT__ . "/Views/clients/index.data.php") ?>
+                            <?php include_once(__ROOT__ . "/clients/index.data.php") ?>
                         </div>
                     </div>
                     <!-- /.card-body -->
@@ -90,12 +84,12 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
         <!-- /.control-sidebar -->
     </div>
     <?php
-    include_once(__ROOT__ . '/Views/Layout/footer.php');
+    include_once(__ROOT__ . '/Layout/footer.php');
     ?>
     <!-- ./wrapper -->
     <!-- links script -->
     <?php
-    include_once(__ROOT__ . '/Views/Layout/links.php');
+    include_once(__ROOT__ . '/Layout/links.php');
     ?>
 </body>
 
