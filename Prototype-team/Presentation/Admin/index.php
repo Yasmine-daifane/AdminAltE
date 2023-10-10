@@ -22,7 +22,7 @@ include_once(__ROOT__ . "/Layout/head.php");
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <h1>Compétences</h1>
+            
             </section>
 
             <section class="content">
@@ -46,26 +46,24 @@ include_once(__ROOT__ . "/Layout/head.php");
                         <table class="table table-striped Competences">
     <thead>
         <tr>
-            <th style="width: 5%">
-                #
+          
+            <th style="width: 3%">
+              Reference
             </th>
-            <th style="width: 5%">
-                Nom
-            </th>
-            <th class="text-center" style="width: 10%">
+            <th class="text-center" style="width: 9%">
                 Code
             </th>
-            <th style="width: 35%">
-                Description
+            <th style="width: 60%">
+            Nom
             </th>
-            <th style="width: 15%"> <!-- Adjust the width for action buttons -->
+            <th style="width: 25%"> <!-- Adjust the width for action buttons -->
                 Actions
             </th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>1</td>
+         
             <td>C1</td>
             <td>Maquette</td>
             <td>
@@ -83,7 +81,7 @@ include_once(__ROOT__ . "/Layout/head.php");
             </td>
         </tr>
         <tr>
-            <td>2</td>
+       
             <td>C2</td>
             <td>Base Données</td>
             <td>
@@ -101,7 +99,7 @@ include_once(__ROOT__ . "/Layout/head.php");
             </td>
         </tr>
         <tr>
-            <td>3</td>
+          
             <td>C3</td>
             <td>back-end</td>
             <td>
@@ -119,7 +117,7 @@ include_once(__ROOT__ . "/Layout/head.php");
             </td>
         </tr>
         <tr>
-            <td>4</td>
+      
             <td>C4</td>
             <td>Gestion</td>
             <td>
@@ -137,7 +135,7 @@ include_once(__ROOT__ . "/Layout/head.php");
             </td>
         </tr>
         <tr>
-            <td>5</td>
+        
             <td>C5</td>
             <td>Mobile native</td>
             <td>
@@ -155,7 +153,7 @@ include_once(__ROOT__ . "/Layout/head.php");
             </td>
         </tr>
         <tr>
-            <td>6</td>
+         
             <td>C6</td>
             <td>Tests</td>
             <td>
@@ -172,7 +170,7 @@ include_once(__ROOT__ . "/Layout/head.php");
             </td>
         </tr>
         <tr>
-            <td>7</td>
+       
             <td>C7</td>
             <td>Déploiement</td>
             <td>
