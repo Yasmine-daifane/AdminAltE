@@ -1,11 +1,30 @@
 <?php
 define('__ROOT__', dirname(dirname(__FILE__)));
+
+ include_once(__ROOT__ . "/Layout/Loader.php"); 
+
+$competenceBLO = new CompetenceBLO();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Check if the form is submitted
+    if (isset($_POST['add_competence'])) {
+        $competence = new Competence();
+        $competence->setREFERENCE($_POST['reference']);
+        $competence->setCODE($_POST['code']);
+        $competence->setNOM($_POST['nom']);
+        $competenceBLO->AddCompetence($competence);
+        // Redirect to the same page to display the table after adding a competence
+        header("Location: index.php");
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <?php
 include_once(__ROOT__ . "/Layout/head.php");
 ?>
+
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -51,29 +70,24 @@ include_once(__ROOT__ . "/Layout/head.php");
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="inputName"> Competences Reference</label>
-                                        <input name="nom" type="text" id="inputName" class="form-control">
+                                        <label for="inputReference">Competences Reference</label>
+                                        <input name="reference" type="text" id="inputReference" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputEmail"> Competences Code  </label>
-                                        <textarea name="email" id="inputEmail" class="form-control"
-                                            rows="4"></textarea>
+                                        <label for="inputCode">Competences Code</label>
+                                        <input name="code" type="text" id="inputCode" class="form-control">
                                     </div>
-
                                     <div class="form-group">
-                                        <label for="inputEmail"> Competences Nom  </label>
-                                        <textarea name="email" id="inputEmail" class="form-control"
-                                            rows="4"></textarea>
+                                        <label for="inputNom">Competences Nom</label>
+                                        <input name="nom" type="text" id="inputNom" class="form-control">
                                     </div>
-
-
-                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
+                           <button type="submit" name="add_competence" class="btn btn-primary">Ajouter</button>
                             <a href="index.php" class="btn btn-secondary">Annuler</a>
                            
                         </div>

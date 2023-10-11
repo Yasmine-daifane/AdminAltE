@@ -32,3 +32,5 @@
     <link rel="stylesheet"
         href="/AdminAltE/Prototype-team/Presentation/Assets/vendor/AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.css">
 </head>
+
+

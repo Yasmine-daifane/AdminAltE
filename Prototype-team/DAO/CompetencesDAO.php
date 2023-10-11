@@ -1,4 +1,5 @@
 <?php
+require_once 'C:\xampp\htdocs\AdminAltE\Prototype-team\DB\DatabaseConnection.php'; 
 
 class CompetencesDAO
 {
@@ -6,15 +7,8 @@ class CompetencesDAO
 
     public function __construct()
     {
-        $dsn = "mysql:host=localhost;dbname=CompetencesDatabase";
-        $username = "root";
-        $password = "";
-
-        try {
-            $this->pdo = new PDO($dsn, $username, $password);
-        } catch (PDOException $e) {
-            throw new Exception("Database connection failed: " . $e->getMessage());
-        }
+        $databaseConnection = new DatabaseConnection();
+        $this->pdo = $databaseConnection->connect();
     }
 
     public function AddCompetence(Competence $competence)
@@ -23,6 +17,11 @@ class CompetencesDAO
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$competence->getREFERENCE(), $competence->getCODE(), $competence->getNOM()]);
     }
+
+  
+
+
+
 
     public function GetAllCompetences()
     {
