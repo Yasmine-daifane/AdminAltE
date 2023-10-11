@@ -66,6 +66,8 @@ class CompetencesDAO
         $sql = "DELETE FROM Competences WHERE ID = ?";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$competenceID]);
+   
+
     }
 
     public function UpdateCompetence(Competence $competence)

@@ -12,6 +12,10 @@ include_once(__ROOT__ . "/Layout/head.php");
 
 <?php include_once(__ROOT__ . "/Layout/Loader.php"); ?>
 
+
+
+
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
        
@@ -75,10 +79,10 @@ foreach ($competences as $competence) {
     <td><?= $competence->getNOM() ?></td>
     <td class="client-actions">
        
-        <a class="btn btn-info btn-sm" href="editer.php?Id_client=<?= $competence->getID() ?>">
+        <a class="btn btn-info btn-sm" href="Edite.php?competenceID=<?= $competence->getID() ?>">
             <i class="fas fa-pencil-alt"></i> Edit
         </a>
-        <a class="btn btn-danger btn-sm" href="supprimer.php?Id_client=<?= $competence->getID() ?>">
+        <a class="btn btn-danger btn-sm" href="./supprimer.php?competenceID=<?= $competence->getID() ?>">
             <i class="fas fa-trash"></i> Delete
         </a>
     </td>
