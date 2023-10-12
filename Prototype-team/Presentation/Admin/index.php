@@ -80,10 +80,10 @@ foreach ($competences as $competence) {
     <td class="client-actions">
        
         <a class="btn btn-info btn-sm" href="Edite.php?competenceID=<?= $competence->getID() ?>">
-            <i class="fas fa-pencil-alt"></i> Edit
+            <i class="fas fa-pencil-alt"></i> Modifier
         </a>
         <a class="btn btn-danger btn-sm" href="./supprimer.php?competenceID=<?= $competence->getID() ?>">
-            <i class="fas fa-trash"></i> Delete
+            <i class="fas fa-trash"></i> Supprimer
         </a>
     </td>
 </tr>
