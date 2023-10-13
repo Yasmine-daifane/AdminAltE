@@ -16,7 +16,10 @@ include_once(__ROOT__ . "/Layout/head.php");
      $code = $_POST['CODE'];
      $nom = $_POST['NOM'];
      $description = $_POST['DESCRIPTION'];
-
+     if (empty($reference)  || empty($nom)) {
+        $errorMessage = 'Please fill in all required fields
+       ,reference ,nom  .';
+    } else {
  
      $competence->setID($id);
      $competence->setREFERENCE($reference);
@@ -27,7 +30,7 @@ include_once(__ROOT__ . "/Layout/head.php");
      $competenceBLO->UpdateCompetence($competence);
      header('Location: index.php');
 
- }
+ }}
  ?>
   
 <!DOCTYPE html>
@@ -39,6 +42,12 @@ include_once(__ROOT__ . "/Layout/head.php");
         <?php include_once(__ROOT__ . "/Layout/sidebare.php");?>
         <div class="content-wrapper" style="min-height: 1604.61px;">
             <section class="content-header">
+            <div class="text-center"> <?php if (!empty($errorMessage)): ?>
+                                        <div class="alert alert-danger">
+                                            <?= $errorMessage ?>
+                                        </div>
+                                        <?php endif; ?>
+                                    </div>
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
@@ -72,7 +81,8 @@ include_once(__ROOT__ . "/Layout/head.php");
                                     <input type="hidden" required="required" class="form-control" id="ID" name="ID"
                                         value=<?php echo $competence->getID() ?>>
                                     <div class="form-group">
-                                        <label for="inputName"> Reference</label>
+                                        <label for="inputName"> Reference <span
+                                                    class="text-danger">*</span></label></label>
                                         <input name="REFERENCE" value="<?php echo $competence->getREFERENCE() ?>" type="text" id="inputName" class="form-control"  />
                                     </div>
                                     <div class="form-group">
@@ -81,7 +91,8 @@ include_once(__ROOT__ . "/Layout/head.php");
                                             rows="4"><?php echo $competence->getCODE() ?></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputDescription"> Name</label>
+                                        <label for="inputDescription"> Name <span
+                                                    class="text-danger ">*</span></label></label>
                                         <textarea name="NOM" id="inputDescription" class="form-control"
                                             rows="4"><?php echo $competence->getNOM() ?></textarea>
                                     </div>

@@ -24,6 +24,8 @@ class CompetencesDAO
             $competence->getNOM(),
             $competence->getDESCRIPTION() 
         ]);
+
+        header('Location: ../Admin/index.php?succsses=AddSuccess');
     }
 
     public function GetAllCompetences()

@@ -7,31 +7,36 @@ define('__ROOT__', dirname(dirname(__FILE__)));
  $errorMessage = '';
  
  if (isset($_POST['add_competence'])) {
-     $competence = new Competence();
-     $reference = $_POST['reference'];
-     $code = $_POST['code'];
-     $nom = $_POST['nom'];
-     $description = $_POST['description'];
+    $competence = new Competence();
+    $reference = trim($_POST['reference']);
+    $code = trim($_POST['code']);
+    $nom = trim($_POST['nom']);
+    $description = trim($_POST['description']);
+
+    if (empty($reference) || empty($nom)) {
+        $errorMessage = 'Please fill in all required fields (Reference, Nom).';
+    } else 
+        $competence->setREFERENCE($reference);
+        $competence->setCODE($code);
+        $competence->setNOM($nom);
+        $competence->setDescription($description);
+
+        $insertedId = $competenceBLO->AddCompetence($competence);
+
+        if ($insertedId > 0) {
+            // Redirect to the same page to display the table after adding a competence
+            header("Location: index.php");
+        } else {
+            $errorMessage = 'Failed to add competence. Please try again.';
+        }
+    
+}
  
-     if (empty($reference) || empty($code) || empty($nom)) {
-         $errorMessage = 'Please fill in all required fields
-        code,reference .';
-     } else {
-         $competence->setREFERENCE($reference);
-         $competence->setCODE($code);
-         $competence->setNOM($nom);
-         $competence->setDescription($description);
-         
-         $insertedId = $competenceBLO->AddCompetence($competence);
  
-         if ($insertedId > 0) {
-             // Redirect to the same page to display the table after adding a competence
-             header("Location: index.php");
-         } else {
-             $errorMessage = 'Failed to add competence. Please try again.';
-         }
-     }
- }
+ 
+ 
+ 
+ 
  ?>
 
 <!DOCTYPE html>
@@ -77,12 +82,14 @@ include_once(__ROOT__ . "/Layout/head.php");
                         <div class="col">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <div> <?php if (!empty($errorMessage)): ?>
+                                <div class="text-center">
+                                    <?php if (!empty($errorMessage)): ?>
                                         <div class="alert alert-danger">
-                                            <?= $errorMessage ?>
+                                            <?php echo $errorMessage; ?>
                                         </div>
-                                        <?php endif; ?>
-                                    </div>
+                                    <?php endif; ?>
+                                </div>
+
                                     <h3 class="card-title">Ajouter Competences</h3>
                                     <div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse"
@@ -94,8 +101,9 @@ include_once(__ROOT__ . "/Layout/head.php");
                                 <div class="card-body">
                                     <form method="post">
                                         <div class="form-group">
-                                            <label for="inputReference">Reference<span
-                                                    class="text-danger">*</span></label>
+                                            <label for="inputReference">
+                                                Reference
+                                                <span class="text-danger">*</span>
                                             </label>
                                             <input name="reference" type="text" id="inputReference"
                                                 class="form-control">

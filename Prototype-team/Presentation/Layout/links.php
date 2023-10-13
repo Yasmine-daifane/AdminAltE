@@ -59,3 +59,10 @@
     toolbar_mode: 'floating',
   });
 </script>
+
+<script >
+    function setId(id) {
+        document.getElementById('IDModal').value = id;
+
+    }
+</script>

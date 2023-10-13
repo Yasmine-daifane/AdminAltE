@@ -7,13 +7,15 @@ define('__ROOT__', dirname(dirname(__FILE__)));
 
 
 
- if (isset($_GET['competenceID'])) {
+ if (isset($_POST['competenceBTN'])) {
+    
     $competenceBLO = new CompetenceBLO();
-    $id = $_GET['competenceID'];
+    $id = $_POST['competenceID'];
 
+   
     $competenceBLO->DeleteCompetence($id);
 
-    header('Location: index.php');
+    header('Location: index.php?succsses=deleteSuccess');
     exit; 
 }
  ?>
