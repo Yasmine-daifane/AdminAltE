@@ -71,15 +71,15 @@ include_once(__ROOT__ . "/Layout/head.php");
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="inputReference">Competences Reference</label>
-                                        <input name="reference" type="text" id="inputReference" class="form-control">
+                                        <input name="reference" type="text" id="inputReference" class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputCode">Competences Code</label>
-                                        <input name="code" type="text" id="inputCode" class="form-control">
+                                        <input name="code" type="text" id="inputCode" class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="inputNom">Competences Nom</label>
-                                        <input name="nom" type="text" id="inputNom" class="form-control">
+                                        <input name="nom" type="text" id="inputNom" class="form-control" required>
                                     </div>
                                 </div>
                             </div>

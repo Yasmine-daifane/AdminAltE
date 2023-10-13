@@ -70,7 +70,7 @@ include_once(__ROOT__ . "/Layout/head.php");
                                         value=<?php echo $competence->getID() ?>>
                                     <div class="form-group">
                                         <label for="inputName">Competence Reference</label>
-                                        <input name="REFERENCE" value="<?php echo $competence->getREFERENCE() ?>" type="text" id="inputName" class="form-control" />
+                                        <input name="REFERENCE" value="<?php echo $competence->getREFERENCE() ?>" type="text" id="inputName" class="form-control"  />
                                     </div>
                                     <div class="form-group">
                                         <label for="inputDescription">Competence Code</label>
@@ -90,7 +90,7 @@ include_once(__ROOT__ . "/Layout/head.php");
                     <div class="row">
                         <div class="col-12">
                             <a href="index.php" class="btn btn-secondary">Cancel</a>
-                            <input type="submit" name="modifier" value="Update Competence"
+                            <input type="submit" name="modifier" value="Modifier Competence"
                                 class="btn btn-success float-right">
                         </div>
                     </div>
