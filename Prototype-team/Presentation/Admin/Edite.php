@@ -117,6 +117,7 @@ include_once(__ROOT__ . "/Layout/head.php");
         </div>
     </div>
     <?php
+    
     include_once(__ROOT__ . "/Layout/footer.php");
     ?>
 </body>

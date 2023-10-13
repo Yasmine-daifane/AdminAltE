@@ -128,9 +128,7 @@ include_once(__ROOT__ . "/Layout/head.php");
                             <button type="button" class="close" data-dismiss="modal">×</button>
                         </div>
                         <div class="modal-body">
-                            <!-- Modal body content goes here -->
                             <p>are u sure u wanna delet this ??!! 
-                                <!-- <input type="text" id="IDModal"> -->
                             </p>
                             <form class="modal-footer" action="./supprimer.php" method="POST">
                                 <input name="competenceID" type="hidden" id="IDModal">
