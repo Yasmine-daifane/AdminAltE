@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 11 oct. 2023 à 11:16
+-- Généré le : ven. 13 oct. 2023 à 14:27
 -- Version du serveur : 10.4.28-MariaDB
 -- Version de PHP : 8.2.4
 
@@ -31,21 +31,24 @@ CREATE TABLE `competences` (
   `ID` int(11) NOT NULL,
   `REFERENCE` varchar(2) NOT NULL,
   `CODE` varchar(100) NOT NULL,
-  `NOM` text NOT NULL
+  `NOM` text NOT NULL,
+  `Description` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `competences`
 --
 
-INSERT INTO `competences` (`ID`, `REFERENCE`, `CODE`, `NOM`) VALUES
-(1, 'C1', 'Maquette', 'Maquetter une application mobile'),
-(2, 'C2', 'Base Données', 'Manipuler une base de données - perfectionnement'),
-(3, 'C3', 'back-end', 'Développer la partie back-end d’une application web ou web mobile - perfectionnement'),
-(4, 'C4', 'Gestion', 'Collaborer à la gestion d’un projet informatique et à l’organisation de l’environnement de développement - perfectionnement'),
-(5, 'C5', 'mobile Native', 'Développer une application mobile native, with Android and React Native'),
-(6, 'C6', 'Tests', 'Préparer et exécuter les plans de tests d’une application'),
-(7, 'C7', 'Deploiement', 'Préparer et exécuter le déploiement d’une application web et mobile - perfectionnement');
+INSERT INTO `competences` (`ID`, `REFERENCE`, `CODE`, `NOM`, `Description`) VALUES
+(1, 'C1', 'Maquette', 'Maquetter une application mobile', ' Cette compétence vous permettra de concevoir des maquettes d\'applications mobiles, aidant ainsi à visualiser et à planifier l\'interface utilisateur'),
+(2, 'C2', 'Base Données', 'Manipuler une base de données - perfectionnement', ' Cette compétence vous permettra de maîtriser la manipulation avancée des bases de données, ce qui est essentiel pour stocker et gérer des informations'),
+(3, 'C3', 'back-end', 'Développer la partie back-end d’une application web ou web mobile - perfectionnement', 'Cette compétence vous permettra de créer et de gérer la logique côté serveur d\'applications web et mobiles avancées'),
+(4, 'C4', 'Gestion', 'Collaborer à la gestion d’un projet informatique et à l’organisation de l’environnement de développement - perfectionnement', 'Cette compétence vous préparera à jouer un rôle essentiel dans la gestion de projets informatiques et l\'optimisation de l\'environnement de développement'),
+(5, 'C5', 'mobile Native', 'Développer une application mobile native, with Android and React Native', 'Cette compétence vous permettra de créer des applications mobiles performantes pour les plateformes Android et React Native'),
+(6, 'C6', 'Tests', 'Préparer et exécuter les plans de tests d’une application', 'Cette compétence vous aidera à élaborer des stratégies de test efficaces pour garantir la qualité des applications'),
+(7, 'C7', 'Deploiement', 'Préparer et exécuter le déploiement d’une application web et mobile - perfectionnement', 'Cette compétence vous permettra de maîtriser le processus de déploiement d\'applications web et mobiles avancées'),
+(28, 'es', 'Provident minus nos', 'Nisi ullam culpa vo', 'Velit magnam ipsum n'),
+(29, 'Eu', 'Ipsam porro iure aut', 'Et dicta nulla velit', '<p><strong>ggggggggggg</strong></p>');
 
 --
 -- Index pour les tables déchargées
@@ -65,7 +68,7 @@ ALTER TABLE `competences`
 -- AUTO_INCREMENT pour la table `competences`
 --
 ALTER TABLE `competences`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

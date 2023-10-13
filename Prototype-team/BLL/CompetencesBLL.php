@@ -1,10 +1,11 @@
-<?php 
+<?php
 class CompetenceBLO {
     private $competencesDao;
     public $errorMessage;
 
     public function __construct() {
         $this->competencesDao = new CompetencesDAO();
+        $this->errorMessage = '';
     }
 
     public function GetAllCompetences() {
@@ -17,36 +18,36 @@ class CompetenceBLO {
 
     public function AddCompetence(Competence $competence) {
         $insertedId = 0;
-        // Add validation logic if needed
-        $insertedId = (int)$this->competencesDao->AddCompetence($competence);
+    
+        if (empty($competence->getREFERENCE()) || empty($competence->getCODE()) || empty($competence->getNOM())) {
+            $this->errorMessage = 'Please fill in all required fileds .';
+        } else {
+            $insertedId = (int) $this->competencesDao->AddCompetence($competence);
+        }
+    
         return $insertedId;
     }
-
+    
     public function UpdateCompetence(Competence $competence) {
         $affectedRows = 0;
-        // Add validation logic if needed
-        $affectedRows = (int)$this->competencesDao->UpdateCompetence($competence);
+    
+        if (empty($competence->getREFERENCE()) || empty($competence->getCODE()) || empty($competence->getNOM())) {
+            $this->errorMessage = 'Please fill in all required fields.';
+        } else {
+            $affectedRows = (int) $this->competencesDao->UpdateCompetence($competence);
+        }
+    
         return $affectedRows;
     }
+    
+    
 
     public function DeleteCompetence($competenceID) {
         $affectedRows = 0;
-        $affectedRows = (int)$this->competencesDao->DeleteCompetence($competenceID);
+
+        $affectedRows = (int) $this->competencesDao->DeleteCompetence($competenceID);
         return $affectedRows;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
+    

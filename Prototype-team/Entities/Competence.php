@@ -1,10 +1,11 @@
- <?php
+<?php
 class Competence
 {
     private $ID;
     private $REFERENCE;
     private $CODE;
     private $NOM;
+    private $DESCRIPTION;
 
     public function getID()
     {
@@ -44,6 +45,16 @@ class Competence
     public function setNOM($NOM)
     {
         $this->NOM = $NOM;
+    }
+
+    public function getDESCRIPTION()
+    {
+        return $this->DESCRIPTION;
+    }
+
+    public function setDESCRIPTION($DESCRIPTION)
+    {
+        $this->DESCRIPTION = $DESCRIPTION;
     }
 }
 ?>

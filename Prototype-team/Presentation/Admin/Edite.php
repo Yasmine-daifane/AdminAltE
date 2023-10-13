@@ -15,11 +15,14 @@ include_once(__ROOT__ . "/Layout/head.php");
      $reference = $_POST['REFERENCE'];
      $code = $_POST['CODE'];
      $nom = $_POST['NOM'];
+     $description = $_POST['DESCRIPTION'];
+
  
      $competence->setID($id);
      $competence->setREFERENCE($reference);
      $competence->setCODE($code);
      $competence->setNOM($nom);
+     $competence->setDESCRIPTION($description);
  
      $competenceBLO->UpdateCompetence($competence);
      header('Location: index.php');
@@ -57,7 +60,7 @@ include_once(__ROOT__ . "/Layout/head.php");
                         <div class="col">
                             <div class="card card-primary">
                                 <div class="card-header">
-                                <h3 class="card-title">Edit Competence: <?= $competence ? $competence->getNOM() : '' ?></h3>
+                                <h3 class="card-title">Edit Competence: <?= $competence ? $competence->getREFERENCE() : '' ?></h3>
                                     <div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse"
                                             title="Collapse">
@@ -69,18 +72,22 @@ include_once(__ROOT__ . "/Layout/head.php");
                                     <input type="hidden" required="required" class="form-control" id="ID" name="ID"
                                         value=<?php echo $competence->getID() ?>>
                                     <div class="form-group">
-                                        <label for="inputName">Competence Reference</label>
+                                        <label for="inputName"> Reference</label>
                                         <input name="REFERENCE" value="<?php echo $competence->getREFERENCE() ?>" type="text" id="inputName" class="form-control"  />
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputDescription">Competence Code</label>
+                                        <label for="inputDescription"> Code</label>
                                         <textarea name="CODE" id="inputDescription" class="form-control"
                                             rows="4"><?php echo $competence->getCODE() ?></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputDescription">Competence Name</label>
+                                        <label for="inputDescription"> Name</label>
                                         <textarea name="NOM" id="inputDescription" class="form-control"
                                             rows="4"><?php echo $competence->getNOM() ?></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputDescription">Description</label>
+                                        <textarea name="DESCRIPTION" id="inputDescription" class="form-control" rows="4"><?php echo $competence->getDESCRIPTION() ?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -99,11 +106,11 @@ include_once(__ROOT__ . "/Layout/head.php");
         </div>
     </div>
     <?php
-    include_once(__ROOT__ . "/Views/Layout/footer.php");
+    include_once(__ROOT__ . "/Layout/footer.php");
     ?>
 </body>
 <?php
-include_once(__ROOT__ . "/Views/Layout/links.php");
+include_once(__ROOT__ . "/Layout/links.php");
 ?>
 
 </html>

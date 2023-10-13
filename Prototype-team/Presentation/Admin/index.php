@@ -58,8 +58,9 @@ include_once(__ROOT__ . "/Layout/head.php");
                                 <tr>
                                     <th style="width: 3%">Reference</th>
                                     <th class="text-center" style="width: 9%">Code</th>
-                                    <th style="width: 60%">Nom</th>
-                                    <th style="width: 25%">Actions</th>
+                                    <th style="width: 20%">Nom</th>
+                                    <th style="width: 40%">Description</th>
+                                    <th style="width: 25%">Actions </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -76,6 +77,7 @@ include_once(__ROOT__ . "/Layout/head.php");
                                     <td><?= $competence->getREFERENCE() ?></td>
                                     <td><a><?= $competence->getCODE() ?></a></td>
                                     <td><?= $competence->getNOM() ?></td>
+                                    <td><?= $competence->getDESCRIPTION() ?></td>
                                     <td class="client-actions">
 
                                         <a class="btn btn-info btn-sm"
@@ -86,7 +88,9 @@ include_once(__ROOT__ . "/Layout/head.php");
                                             href="./supprimer.php?competenceID=<?= $competence->getID() ?>">
                                             <i class="fas fa-trash"></i> Supprimer
                                         </a>
+
                                     </td>
+                                    
                                 </tr>
                                 <?php
                                 } // endforeach
@@ -97,8 +101,9 @@ include_once(__ROOT__ . "/Layout/head.php");
                     </div>
                 </div>
             </section>
+
         </div>
-        <aside class="control-sidebar control-sidebar-dark">
+ <aside class="control-sidebar control-sidebar-dark">
 
         </aside>
     </div>
@@ -112,3 +117,4 @@ include_once(__ROOT__ . "/Layout/head.php");
 </body>
 
 </html>
+

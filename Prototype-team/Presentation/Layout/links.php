@@ -51,3 +51,11 @@
 <script
     src="/AdminAltE/Prototype-team/Presentation/Assets/vendor/AdminLTE-3.2.0/dist/js/pages/dashboard.js"></script>
 <script src="/AdminAltE/Prototype-team/Presentation/Assets/js/Index.js"></script>
+
+<script>
+  tinymce.init({
+    selector: '#inputDescription', // Use the textarea's ID
+    plugins: 'advlist autolink lists link image charmap print preview anchor',
+    toolbar_mode: 'floating',
+  });
+</script>
