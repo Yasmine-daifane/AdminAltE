@@ -17,8 +17,7 @@ include_once(__ROOT__ . "/Layout/head.php");
      $nom = $_POST['NOM'];
      $description = $_POST['DESCRIPTION'];
      if (empty($reference)  || empty($nom)) {
-        $errorMessage = 'Please fill in all required fields
-       ,reference ,nom  .';
+        $errorMessage = 's\'ils vous plait compelete les champs necessaire ,reference ,nom  .';
     } else {
  
      $competence->setID($id);
@@ -97,9 +96,10 @@ include_once(__ROOT__ . "/Layout/head.php");
                                             rows="4"><?php echo $competence->getNOM() ?></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputDescription">Description</label>
-                                        <textarea name="DESCRIPTION" id="inputDescription" class="form-control" rows="4"><?php echo $competence->getDESCRIPTION() ?></textarea>
-                                    </div>
+                                            <label for="inputDescription">Description</label>
+                                            <textarea name="DESCRIPTION" id="inputDescription"
+                                                class="form-control"><?php echo $competence->getDESCRIPTION() ?></textarea>
+                                        </div>
                                 </div>
                             </div>
 
